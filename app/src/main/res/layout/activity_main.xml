@@ -35,7 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconContentDescription="icone de e-mail"
-            app:startIconDrawable="@drawable/email_icon_24dp">
+            app:startIconDrawable="@drawable/email_icon_24dp"
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -51,7 +52,8 @@
             android:layout_height="wrap_content"
             app:endIconMode="password_toggle"
             app:startIconContentDescription="icon password"
-            app:startIconDrawable="@drawable/password_icon_24dp">
+            app:startIconDrawable="@drawable/password_icon_24dp"
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
