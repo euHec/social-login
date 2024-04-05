@@ -10,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
+    // correção de erros
     private val email_input by lazy { findViewById<TextInputLayout>(R.id.email_text_input_layout)}
     private val password_input by lazy { findViewById<TextInputLayout>(R.id.password_text_input_layout) }
     private val button by lazy { findViewById<Button>(R.id.login_button) }
