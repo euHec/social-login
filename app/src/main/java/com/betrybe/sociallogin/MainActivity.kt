@@ -35,9 +35,14 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             val isTrue = validarEmail(email.text)
-            val isValidPassword = password.text.length < 4
-            if (!isTrue) email.error = getString(R.string.email_warning)
-            if (isValidPassword) password.error = getString(R.string.password_warning)
+            val isValidPassword = password.text.length <= 4
+            if (!isTrue || isValidPassword) {
+                if (!isTrue) email_input.error = getString(R.string.email_warning)
+                if (isValidPassword) password_input.error = getString(R.string.password_warning)
+                return@setOnClickListener
+            }
+            email_input.error = null
+            password_input.error = null
             if (isTrue && !isValidPassword) {
                 Snackbar.make(findViewById(android.R.id.content), R.string.login_succeeded, Snackbar.LENGTH_LONG).show()
             }
